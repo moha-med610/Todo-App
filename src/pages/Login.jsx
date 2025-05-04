@@ -27,11 +27,7 @@ const Login = () => {
         withCredentials: true,
       });
 
-      Cookies.set("token", response.data.token, {
-        expires: 1,
-        secure: true,
-        sameSite: "None",
-      });
+      Cookies.set("token", response.data.token);
 
       toast.success(response.data.message);
       navigate("/todos");
