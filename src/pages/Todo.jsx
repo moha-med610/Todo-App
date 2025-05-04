@@ -4,7 +4,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { MdDelete } from "react-icons/md";
 import { MdEdit } from "react-icons/md";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Todo = () => {
   const [tasks, setTasks] = useState([]);
@@ -64,6 +64,7 @@ const Todo = () => {
             key={t._id}
             className="bg-white/50 rounded-2xl shadow-lg p-4 w-full backdrop-blur-xl hover:translate-x-2 hover:bg-white/20 transition-all duration-200 cursor-pointer"
           >
+            <Link to={`/todoDetails/${t._id}`} className="block">
             <div className="flex flex-col gap-2">
               <h2 className="lg:text-2xl md:text-2xl sm:text-sm font-bold text-gray-700 truncate">
                 {t.title}
@@ -72,7 +73,7 @@ const Todo = () => {
                 {t.description}
               </p>
             </div>
-
+            </Link>
             <div className="flex justify-end items-center gap-2 mt-4">
               <button
                 aria-label={`Delete ${t.title}`}
@@ -97,6 +98,7 @@ const Todo = () => {
                 <MdEdit />
               </button>
             </div>
+            
           </div>
         ))
       )}
