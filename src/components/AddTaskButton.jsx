@@ -4,13 +4,13 @@ import { FcTodoList } from "react-icons/fc";
 
 const AddTaskButton = () => {
   return (
-    <div className="flex items-center justify-center gap-1 bg-opacity-70 bg-lime-700 p-2 rounded-xl text-sm sm:text-base m-2 text-white hover:bg-lime-800 hover:scale-95 transition-all font-medium">
+    <div className="flex justify-end">
           <Link
             to="/addTodo"
             className="flex items-center gap-2 bg-opacity-70 bg-lime-700 p-2 rounded-2xl m-2 text-white hover:bg-lime-800 hover:scale-95 transition-all font-medium"
           >
             <FcTodoList className="text-2xl" />
-            Add Task
+            Add New Task
           </Link>
         </div>
   )

@@ -43,7 +43,7 @@ const Todo = () => {
 
   return (
     <>
-      <main className="h-screen w-screen flex justify-center bg-slate-200 overflow-x-hidden">
+      <main className="h-screen w-screen flex justify-center bg-slate-200 overflow-x-auto">
   <div className="w-full max-w-6xl p-6">
     
 
