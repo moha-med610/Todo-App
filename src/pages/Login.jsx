@@ -28,8 +28,9 @@ const Login = () => {
       });
 
       Cookies.set("token", response.data.token, {
-        sameSite: "None",
+        expires: 1,
         secure: true,
+        sameSite: "None",
       });
 
       toast.success(response.data.message);
